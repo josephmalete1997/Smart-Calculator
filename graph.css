@@ -1,0 +1,116 @@
+.graphs{
+	border-radius: 10px;
+	width:100%;
+	border: 2px solid white;
+	justify-content: center;
+  align-items: center;
+	background: rgb(0, 0, 0);
+  display: flex;
+	flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.graphs:hover .y-values{
+  color:rgb(255, 255, 255);
+  background: white;
+}
+.graphs:hover .x-values{
+  color:rgb(255, 255, 255);
+  background: white;
+}
+
+.x-axis{
+  width:100%;
+  height:1px;
+  background: rgb(255, 255, 255);
+  margin: 10px;
+  opacity: 0.1;
+}
+.y-axis{
+  position: absolute;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.y-holder{
+  width:1px;
+  height:110%;
+  background: blue;
+  opacity: 0.1;
+  margin:0px 10px;
+  position: relative;
+  top:-73.5px;
+}
+
+.x-values{
+  background: transparent;
+  height:5px;
+  width:1px;
+  margin:0px 10px;
+  position: relative;
+  top:-5px;
+  padding-top:10px;
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+  color:rgb(32, 49, 148);
+}
+.y-values{
+  height:1px;
+  background: transparent;
+  margin:20px -5px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  color:rgb(32, 49, 148);
+  transform: rotate(180deg);
+  justify-content: center;
+  align-items: start;
+  width:2px;
+  padding-left: 5px;
+}
+.y-values::before{
+  content: "";
+  display:block;
+  height:1px;
+  margin:20px 0px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  color:rgb(185, 40, 130);
+  transform: rotate(180deg);
+  justify-content: center;
+  align-items: start;
+  padding-left: 5px;
+}
+.x-values:nth-child(16){
+ color:transparent;
+}
+.y-values:nth-child(16){
+ color:transparent;
+}
+.tool-tip {
+  width: auto;
+  padding: 5px 20px;
+  background: rgb(0, 0, 0);
+  color:white;
+  position: absolute;
+  border: 2px solid white;
+  top: 20px;
+  left: 50px;
+  border-radius: 10px;
+  visibility: hidden;
+  transition: 2s;
+}
+
+.str-line {
+  position: relative;
+  cursor: pointer;
+}
+
+.str-line:hover + .tool-tip {
+  visibility: visible;
+}

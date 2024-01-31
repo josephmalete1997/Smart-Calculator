@@ -1,0 +1,60 @@
+
+.fraction{
+  width: 15px;
+  height:15px;
+  border: 2px solid white;
+  margin-left:40%;
+  margin-top:10%;
+  border-radius: 4px;
+}
+.fraction::before{
+  content: "";
+  display: block;
+  width: 15px;
+  height:15px;
+  top:5px;
+  left:40%;
+  position: absolute;
+  border: 2px solid white;
+  border-radius: 4px;
+}
+
+/* <div class="fraction-main"><div class="numerator"></div><div class="denominator"></div></div> */
+.fraction-main{
+  display: flex;
+  flex-direction: column;
+  margin-left: 5px;
+}
+.numerator{
+  width:auto;
+  height:20px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid white;
+  font-size: 28px;
+  padding-bottom: 2px;
+  display: flex;
+  align-items: center;
+
+}
+.denominator{
+  width:auto;
+  height:20px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom:none;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+}
+.no-borders{
+ 
+  background: red;
+  width:auto;
+  height:20px;
+}
+sup{
+  font-size: 20px;
+}

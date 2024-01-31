@@ -1,0 +1,375 @@
+body {
+	margin: 0px;
+	background-color: rgb(29, 31, 54);
+	overflow: auto;
+	user-select: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.main-calculator {
+	width: 500px;
+	background-color: rgb(8, 31, 41);
+	padding: 20px;
+	border-radius: 30px;
+	border: 2px solid white;
+	position: relative;
+	top: 20px;
+}
+
+.screen {
+	width: 98%;
+	height: 200px;
+	background: linear-gradient(rgb(8, 15, 54), rgb(41, 62, 182), rgb(55, 78, 211));
+	position: relative;
+	color: rgb(255, 255, 255);
+	margin: 1%;
+	border-radius: 10px;
+	box-shadow: inset -2px -2px 1px rgba(0, 0, 0, 0.28);
+}
+
+button {
+	height: 70px;
+	border-radius: 10px;
+}
+
+.buttons {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+
+.numbers {
+	width: 70%;
+}
+
+.del {
+	background: red;
+	width: 100px;
+}
+
+.num {
+	background: hsl(239, 50%, 52%);
+}
+
+.sqrt,
+.comma {
+	background: hsl(276, 72%, 36%);
+	width: 60px;
+	height: 70px;
+	font-size: 18px;
+}
+
+.numbers button {
+	width: 60px;
+	height: 70px;
+
+	color: white;
+	border: none;
+	margin: 1px;
+	position: relative;
+}
+
+.num {
+	font-size: 30px;
+}
+
+
+.numbers button::after {
+	content: "";
+	width: 90%;
+	height: 20px;
+	border-radius: 20px 20px 10px 10px;
+	background: hsl(0, 0%, 100%);
+	color: white;
+	border: none;
+	top: 5%;
+	left: 5%;
+	opacity: 0.2;
+	display: block;
+	position: absolute;
+}
+
+.numbers button:hover {
+	background: hsl(214, 41%, 57%);
+	color: white;
+}
+
+.signs {
+	width: 120px;
+
+}
+
+.signs button {
+	width: 90px;
+	background: hsl(200, 42%, 48%);
+	color: white;
+	border: none;
+	margin: 1px;
+	position: relative;
+	font-size: 40px;
+}
+
+.signs button::after {
+	content: "";
+	width: 90%;
+	height: 20px;
+	border-radius: 20px 20px 10px 10px;
+	background: hsl(0, 0%, 100%);
+	color: white;
+	border: none;
+	top: 5%;
+	left: 5%;
+	opacity: 0.2;
+	display: block;
+	position: absolute;
+}
+
+.signs button:hover {
+	background: hsl(200, 80%, 50%);
+	color: white;
+}
+
+/* del */
+
+/*Special styling*/
+#equal {
+	background: hsl(120, 50%, 50%);
+}
+
+.input {
+	color: rgb(255, 255, 255);
+	font-size: 36px;
+	margin-left: 5px;
+	padding-top: 10px;
+	font-family: monospace;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.text-area {
+	display: flex;
+	flex-direction: row;
+}
+
+.output {
+	width: 98%;
+	color: rgb(0, 255, 255);
+	font-size: 36px;
+	padding-right: 2%;
+	position: absolute;
+	bottom: 0px;
+	text-align: right;
+	font-family: monospace;
+}
+
+
+.blinker {
+	font-size: 20px;
+	color: transparent;
+}
+
+/* Arrows */
+.arrows {
+	width: 70%;
+	/* background: red; */
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.arrows button {
+	width: 50px;
+	font-size: 18px;
+	background: rgb(120, 112, 190);
+	color: white;
+	border: none;
+	margin: 1px;
+	position: relative;
+}
+
+
+.arrows button:hover {
+	background: rgb(129, 119, 214);
+}
+
+.arrows button::after {
+	content: "";
+	width: 90%;
+	height: 20px;
+	border-radius: 20px 20px 10px 10px;
+	background: hsl(0, 0%, 100%);
+	color: white;
+	border: none;
+	top: 5%;
+	left: 5%;
+	opacity: 0.2;
+	display: block;
+	position: absolute;
+}
+
+.mode {
+	background-color: rgb(0, 132, 219);
+	width: 95px;
+	height: 70px;
+	font-size: 18px;
+	color: white;
+	border: none;
+	margin: 1px;
+	position: relative;
+	border-radius: 10px;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.mode::after {
+	content: "";
+	width: 90%;
+	height: 20px;
+	border-radius: 20px 20px 10px 10px;
+	background: hsl(0, 0%, 100%);
+	color: white;
+	border: none;
+	top: 5%;
+	left: 5%;
+	opacity: 0.2;
+	display: block;
+	position: absolute;
+}
+
+
+
+/* Controls */
+.arrow-controls {
+	width: 100px;
+	display: flex;
+	font-size: 50px;
+	background: rgb(0, 80, 145);
+	border-radius: 20px;
+	color: white;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	margin: 2px;
+	box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.arrow-controls::after {
+	content: "";
+	width: 30px;
+	height: 30px;
+	display: block;
+	background: rgb(0, 0, 0, 0.05);
+	border-radius: 10px;
+	color: white;
+	position: absolute;
+	align-items: center;
+	justify-content: center;
+	margin: 2px;
+	box-shadow: inset 2px 2px 4px rgb(0, 0, 0, 0.2);
+}
+
+.arrow-controls::before {
+	content: "";
+	width: 90%;
+	height: 20px;
+	border-radius: 20px 20px 10px 10px;
+	background: hsl(0, 0%, 100%);
+	color: white;
+	border: none;
+	top: 5%;
+	left: 5%;
+	opacity: 0.1;
+	display: block;
+	position: absolute;
+}
+
+.up-arrow,
+.down-arrow {
+	font-size: 25px;
+	position: absolute;
+	cursor: pointer;
+}
+
+.up {
+	top: 0px;
+}
+
+.down {
+	bottom: 0px;
+}
+
+.left {
+	position: absolute;
+	left: 0px;
+	cursor: pointer;
+}
+
+.right {
+	position: absolute;
+	right: 0px;
+	cursor: pointer;
+}
+
+.right:hover,
+.left:hover,
+.up:hover,
+.down:hover {
+	opacity: .5;
+}
+
+::-webkit-scrollbar {
+	width: 4px;
+}
+
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #6a6cd1;
+	height: 10px;
+	cursor: all-scroll;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #4570ff;
+}
+
+/* Testing */
+
+/* Row input */
+.row-input {
+	width: 45%;
+	height: 90px;
+	border: 2px solid;
+	bottom: 0px;
+	left: 0px;
+	color: rgb(255, 255, 255);
+	font-size: 40px;
+	display: flex;
+	align-items: center;
+	border: 2px solid white;
+	position: absolute;
+	padding-left: 10px;
+}
+
+.calculations {
+	width: 40%;
+	height: 90px;
+	border: 2px solid;
+	bottom: 0px;
+	color: rgb(255, 255, 255);
+	font-size: 40px;
+	display: flex;
+	align-items: center;
+	border: 2px solid white;
+	position: absolute;
+	left: 50%;
+	padding-left: 50px;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parabola Plot with Grid</title>
+  <style>
+    canvas {
+      border: 1px solid #000;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="parabolaCanvas" width="400" height="400"></canvas>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Get the canvas element and its 2d context
+      const canvas = document.getElementById("parabolaCanvas");
+      const context = canvas.getContext("2d");
+
+      // Function to plot a parabola with grid
+      function plotParabola(a, b, c) {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Draw grid lines
+        drawGrid();
+
+        // Plot the parabola
+        context.beginPath();
+        for (let x = -canvas.width / 2; x <= canvas.width / 2; x += 0.1) {
+          const y = a * x * x + b * x + c;
+          context.lineTo(canvas.width / 2 + x, canvas.height / 2 - y);
+        }
+        context.stroke();
+      }
+
+      // Function to draw grid lines
+      function drawGrid() {
+        const gridSize = 20;
+
+        // Draw horizontal grid lines
+        for (let y = 0; y <= canvas.height; y += gridSize) {
+          context.moveTo(0, y);
+          context.lineTo(canvas.width, y);
+        }
+
+        // Draw vertical grid lines
+        for (let x = 0; x <= canvas.width; x += gridSize) {
+          context.moveTo(x, 0);
+          context.lineTo(x, canvas.height);
+        }
+
+        context.strokeStyle = "#ddd";
+        context.stroke();
+        context.strokeStyle = "#000";
+      }
+
+      // Example: Plotting the parabola y = 0.1x^2 - 20x + 100
+      plotParabola(0.1, -20, 100);
+    });
+  </script>
+</body>
+</html>
